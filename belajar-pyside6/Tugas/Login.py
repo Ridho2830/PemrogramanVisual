@@ -1,5 +1,5 @@
 import sys
-from PySide6.QtWidgets import (QApplication, QCheckBox, QHBoxLayout, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout, QFormLayout, QMessageBox)
+from PySide6.QtWidgets import (QApplication, QCheckBox, QHBoxLayout, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout, QFormLayout)
 from PySide6.QtCore import Qt
 
 class Login(QWidget):
