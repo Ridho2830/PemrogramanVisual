@@ -1,3 +1,11 @@
+"""
+Nama : Rafly Ridho Sukardi
+NIM  : F1D02310134
+Kelas: D
+
+"""
+
+
 import sys
 from PySide6.QtWidgets import (
     QApplication, QWidget, QVBoxLayout, QLineEdit,
