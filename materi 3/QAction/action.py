@@ -1,5 +1,5 @@
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QTextEdit
+from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QTextEdit
 from PySide6.QtGui import QAction, QKeySequence
 
 class TextEditor(QMainWindow):
@@ -90,8 +90,11 @@ class TextEditor(QMainWindow):
             self.statusBar().showMessage("Word wrap OFF", 2000)
     
     def show_about(self):
-        self.statusBar().showMessage("QAction Demo v1.0 - Created by Ridho", 5000)
-
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Tentang")
+        msg.setText("QAction Demo\n\nDibuat oleh Ridho\n\nGitHub: https://github.com/Ridho2830")
+        msg.exec()
+        
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = TextEditor()
