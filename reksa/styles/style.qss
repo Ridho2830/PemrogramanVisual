@@ -1,0 +1,652 @@
+/*
+ * style.qss — Stylesheet eksternal untuk OtakuVault
+ * Tema: Violet Dark — Nuansa Anime/Manga yang Elegan
+ * Palet Utama:
+ *   Background gelap : #0f0d1a, #1a1625
+ *   Surface/card      : #241f35, #2d2745
+ *   Aksen ungu        : #8b5cf6, #a78bfa
+ *   Aksen merah muda  : #ec4899, #f472b6
+ *   Teks utama        : #e8e4f0
+ *   Teks sekunder     : #9990ad
+ */
+
+/* ============================================================
+   GLOBAL & MAIN WINDOW
+   ============================================================ */
+QMainWindow {
+    background-color: #0f0d1a;
+    color: #e8e4f0;
+}
+
+QWidget {
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 13px;
+    color: #e8e4f0;
+}
+
+/* ============================================================
+   MENU BAR
+   ============================================================ */
+QMenuBar {
+    background-color: #1a1625;
+    color: #c4bdd4;
+    border-bottom: 1px solid #2d2745;
+    padding: 4px 0px;
+    font-size: 13px;
+}
+
+QMenuBar::item {
+    padding: 6px 14px;
+    border-radius: 6px;
+    margin: 2px 2px;
+}
+
+QMenuBar::item:selected {
+    background-color: #2d2745;
+    color: #a78bfa;
+}
+
+QMenu {
+    background-color: #1a1625;
+    border: 1px solid #2d2745;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+QMenu::item {
+    padding: 8px 30px 8px 16px;
+    border-radius: 5px;
+    margin: 2px 4px;
+    color: #c4bdd4;
+}
+
+QMenu::item:selected {
+    background-color: #2d2745;
+    color: #a78bfa;
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #2d2745;
+    margin: 4px 10px;
+}
+
+/* ============================================================
+   LABEL
+   ============================================================ */
+QLabel {
+    color: #c4bdd4;
+    font-size: 13px;
+}
+
+QLabel#labelJudul {
+    font-size: 26px;
+    font-weight: bold;
+    color: #f0ecf8;
+    padding: 0px;
+    margin: 0px;
+}
+
+QLabel#labelSubtitle {
+    font-size: 13px;
+    color: #9990ad;
+    padding: 0px;
+    margin: 0px;
+}
+
+QLabel#labelIdentitas {
+    font-size: 12px;
+    color: #a78bfa;
+    padding: 5px 14px;
+    background-color: #241f35;
+    border: 1px solid #3d3560;
+    border-radius: 8px;
+}
+
+QLabel#labelStatTitle {
+    font-size: 10px;
+    font-weight: bold;
+    color: #9990ad;
+    letter-spacing: 1px;
+}
+
+QLabel#labelStatValue {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f0ecf8;
+}
+
+QLabel#labelStatIcon {
+    font-size: 24px;
+}
+
+QLabel#labelDialogTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0ecf8;
+}
+
+QLabel#labelInfoRequired {
+    color: #9990ad;
+    font-size: 11px;
+    font-style: italic;
+}
+
+QLabel#aboutAppName {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0ecf8;
+}
+
+QLabel#aboutVersion {
+    font-size: 12px;
+    color: #9990ad;
+}
+
+QLabel#aboutDescription {
+    font-size: 12px;
+    color: #c4bdd4;
+    padding: 4px 8px;
+}
+
+QLabel#aboutDevTitle {
+    font-size: 11px;
+    color: #9990ad;
+    font-weight: bold;
+}
+
+QLabel#aboutDevName {
+    font-size: 16px;
+    font-weight: bold;
+    color: #a78bfa;
+}
+
+QLabel#aboutDevNim {
+    font-size: 13px;
+    color: #c4bdd4;
+}
+
+/* ============================================================
+   PUSH BUTTON
+   ============================================================ */
+QPushButton {
+    background-color: #241f35;
+    color: #c4bdd4;
+    border: 1px solid #3d3560;
+    border-radius: 8px;
+    padding: 9px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 18px;
+}
+
+QPushButton:hover {
+    background-color: #2d2745;
+    border-color: #5b4f8a;
+    color: #e8e4f0;
+}
+
+QPushButton:pressed {
+    background-color: #3d3560;
+}
+
+/* Tombol Tambah — gradient ungu-pink */
+QPushButton#btnTambah {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #8b5cf6, stop:1 #ec4899);
+    color: white;
+    border: none;
+    font-size: 13px;
+    padding: 10px 24px;
+    border-radius: 8px;
+}
+
+QPushButton#btnTambah:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #7c3aed, stop:1 #db2777);
+}
+
+/* Tombol Edit — hijau emerald */
+QPushButton#btnEdit {
+    background-color: rgba(22, 163, 74, 0.12);
+    color: #4ade80;
+    border: 1px solid rgba(74, 222, 128, 0.25);
+}
+
+QPushButton#btnEdit:hover {
+    background-color: rgba(22, 163, 74, 0.22);
+    border-color: rgba(74, 222, 128, 0.45);
+    color: #86efac;
+}
+
+/* Tombol Hapus — merah */
+QPushButton#btnHapus {
+    background-color: rgba(220, 38, 38, 0.12);
+    color: #f87171;
+    border: 1px solid rgba(248, 113, 113, 0.25);
+}
+
+QPushButton#btnHapus:hover {
+    background-color: rgba(220, 38, 38, 0.22);
+    border-color: rgba(248, 113, 113, 0.45);
+    color: #fca5a5;
+}
+
+/* Tombol Refresh — teal/cyan */
+QPushButton#btnRefresh {
+    background-color: rgba(6, 182, 212, 0.12);
+    color: #22d3ee;
+    border: 1px solid rgba(34, 211, 238, 0.25);
+}
+
+QPushButton#btnRefresh:hover {
+    background-color: rgba(6, 182, 212, 0.22);
+    border-color: rgba(34, 211, 238, 0.45);
+}
+
+/* Tombol Simpan di dialog */
+QPushButton#btnSimpan {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #8b5cf6, stop:1 #a78bfa);
+    color: white;
+    border: none;
+    padding: 10px 32px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+QPushButton#btnSimpan:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #7c3aed, stop:1 #c4b5fd);
+}
+
+/* Tombol Batal di dialog */
+QPushButton#btnBatal {
+    background-color: #241f35;
+    color: #9990ad;
+    border: 1px solid #3d3560;
+    padding: 10px 32px;
+    font-size: 14px;
+}
+
+QPushButton#btnBatal:hover {
+    background-color: #2d2745;
+    color: #c4bdd4;
+    border-color: #5b4f8a;
+}
+
+/* ============================================================
+   LINE EDIT & TEXT EDIT
+   ============================================================ */
+QLineEdit {
+    background-color: #1a1625;
+    color: #e8e4f0;
+    border: 1px solid #3d3560;
+    border-radius: 8px;
+    padding: 9px 14px;
+    font-size: 13px;
+    selection-background-color: #5b4f8a;
+    selection-color: #f0ecf8;
+}
+
+QLineEdit:focus {
+    border-color: #8b5cf6;
+    background-color: #1e1930;
+}
+
+QLineEdit:hover {
+    border-color: #5b4f8a;
+}
+
+QLineEdit::placeholder {
+    color: #6b6185;
+}
+
+QTextEdit {
+    background-color: #1a1625;
+    color: #e8e4f0;
+    border: 1px solid #3d3560;
+    border-radius: 8px;
+    padding: 9px 14px;
+    font-size: 13px;
+    selection-background-color: #5b4f8a;
+    selection-color: #f0ecf8;
+}
+
+QTextEdit:focus {
+    border-color: #8b5cf6;
+    background-color: #1e1930;
+}
+
+/* ============================================================
+   COMBO BOX
+   ============================================================ */
+QComboBox {
+    background-color: #1a1625;
+    color: #e8e4f0;
+    border: 1px solid #3d3560;
+    border-radius: 8px;
+    padding: 9px 14px;
+    font-size: 13px;
+    min-height: 18px;
+}
+
+QComboBox:hover {
+    border-color: #5b4f8a;
+}
+
+QComboBox:focus {
+    border-color: #8b5cf6;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 30px;
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+}
+
+QComboBox::down-arrow {
+    image: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #9990ad;
+    margin-right: 10px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #1a1625;
+    color: #e8e4f0;
+    border: 1px solid #3d3560;
+    border-radius: 6px;
+    selection-background-color: #2d2745;
+    selection-color: #a78bfa;
+    padding: 4px;
+    outline: none;
+}
+
+/* ============================================================
+   SPIN BOX & DOUBLE SPIN BOX
+   ============================================================ */
+QSpinBox, QDoubleSpinBox {
+    background-color: #1a1625;
+    color: #e8e4f0;
+    border: 1px solid #3d3560;
+    border-radius: 8px;
+    padding: 9px 14px;
+    font-size: 13px;
+    min-height: 18px;
+}
+
+QSpinBox:hover, QDoubleSpinBox:hover {
+    border-color: #5b4f8a;
+}
+
+QSpinBox:focus, QDoubleSpinBox:focus {
+    border-color: #8b5cf6;
+}
+
+QSpinBox::up-button, QDoubleSpinBox::up-button {
+    background-color: #241f35;
+    border: none;
+    border-left: 1px solid #3d3560;
+    border-top-right-radius: 8px;
+    width: 24px;
+}
+
+QSpinBox::down-button, QDoubleSpinBox::down-button {
+    background-color: #241f35;
+    border: none;
+    border-left: 1px solid #3d3560;
+    border-bottom-right-radius: 8px;
+    width: 24px;
+}
+
+QSpinBox::up-button:hover, QDoubleSpinBox::up-button:hover {
+    background-color: #2d2745;
+}
+
+QSpinBox::down-button:hover, QDoubleSpinBox::down-button:hover {
+    background-color: #2d2745;
+}
+
+QSpinBox::up-arrow, QDoubleSpinBox::up-arrow {
+    image: none;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 5px solid #9990ad;
+}
+
+QSpinBox::down-arrow, QDoubleSpinBox::down-arrow {
+    image: none;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #9990ad;
+}
+
+/* ============================================================
+   TABLE WIDGET
+   ============================================================ */
+QTableWidget {
+    background-color: #1a1625;
+    color: #c4bdd4;
+    gridline-color: #241f35;
+    border: 1px solid #2d2745;
+    border-radius: 10px;
+    font-size: 13px;
+    selection-background-color: rgba(139, 92, 246, 0.18);
+    selection-color: #a78bfa;
+    outline: none;
+}
+
+QTableWidget::item {
+    padding: 10px 12px;
+    border-bottom: 1px solid #241f35;
+}
+
+QTableWidget::item:selected {
+    background-color: rgba(139, 92, 246, 0.18);
+    color: #a78bfa;
+}
+
+QTableWidget::item:hover {
+    background-color: #1e1930;
+}
+
+QHeaderView::section {
+    background-color: #241f35;
+    color: #9990ad;
+    border: none;
+    border-bottom: 2px solid #3d3560;
+    padding: 12px 14px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+QHeaderView::section:hover {
+    color: #e8e4f0;
+    background-color: #2d2745;
+}
+
+/* Scrollbar pada tabel */
+QTableWidget QScrollBar:vertical {
+    background-color: #1a1625;
+    width: 8px;
+    border: none;
+    border-radius: 4px;
+    margin: 4px 2px;
+}
+
+QTableWidget QScrollBar::handle:vertical {
+    background-color: #3d3560;
+    border-radius: 4px;
+    min-height: 30px;
+}
+
+QTableWidget QScrollBar::handle:vertical:hover {
+    background-color: #5b4f8a;
+}
+
+QTableWidget QScrollBar::add-line:vertical,
+QTableWidget QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QTableWidget QScrollBar:horizontal {
+    background-color: #1a1625;
+    height: 8px;
+    border: none;
+    border-radius: 4px;
+    margin: 2px 4px;
+}
+
+QTableWidget QScrollBar::handle:horizontal {
+    background-color: #3d3560;
+    border-radius: 4px;
+    min-width: 30px;
+}
+
+QTableWidget QScrollBar::handle:horizontal:hover {
+    background-color: #5b4f8a;
+}
+
+QTableWidget QScrollBar::add-line:horizontal,
+QTableWidget QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+QTableWidget QTableCornerButton::section {
+    background-color: #241f35;
+    border: none;
+}
+
+/* ============================================================
+   FRAME
+   ============================================================ */
+QFrame#frameStat {
+    background-color: #1a1625;
+    border: 1px solid #2d2745;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+QFrame#frameStat:hover {
+    border-color: #3d3560;
+    background-color: #1e1930;
+}
+
+QFrame#frameToolbar {
+    background-color: #1a1625;
+    border: 1px solid #2d2745;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+QFrame#frameInfoDev {
+    background-color: #241f35;
+    border: 1px solid #3d3560;
+    border-radius: 10px;
+    padding: 14px;
+}
+
+QFrame#dialogSeparator {
+    color: #2d2745;
+}
+
+/* ============================================================
+   DIALOG
+   ============================================================ */
+QDialog {
+    background-color: #0f0d1a;
+    color: #e8e4f0;
+}
+
+/* ============================================================
+   MESSAGE BOX
+   ============================================================ */
+QMessageBox {
+    background-color: #1a1625;
+    color: #e8e4f0;
+}
+
+QMessageBox QLabel {
+    color: #c4bdd4;
+    font-size: 13px;
+    min-width: 280px;
+}
+
+QMessageBox QPushButton {
+    min-width: 90px;
+    padding: 8px 20px;
+}
+
+/* ============================================================
+   STATUS BAR
+   ============================================================ */
+QStatusBar {
+    background-color: #1a1625;
+    color: #9990ad;
+    border-top: 1px solid #2d2745;
+    font-size: 12px;
+    padding: 2px 8px;
+}
+
+/* ============================================================
+   TOOLTIP
+   ============================================================ */
+QToolTip {
+    background-color: #241f35;
+    color: #e8e4f0;
+    border: 1px solid #3d3560;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+/* ============================================================
+   SCROLLBAR GLOBAL
+   ============================================================ */
+QScrollBar:vertical {
+    background-color: #0f0d1a;
+    width: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #3d3560;
+    border-radius: 5px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #5b4f8a;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    background-color: #0f0d1a;
+    height: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #3d3560;
+    border-radius: 5px;
+    min-width: 30px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: #5b4f8a;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
